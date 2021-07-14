@@ -18,7 +18,10 @@ nav {
 
 .nav__middle {
   color: gray;
+  flex: 1;
+}
 
+.nav__right {
   flex: 1;
 }
 
@@ -43,13 +46,8 @@ input:active {
   outline: none;
 }
 
-.nav__right {
-  flex: 1;
-}
-
 .cart__icon {
   position: relative;
-  width: max-content;
   margin-left: auto;
   display: flex;
   align-items: center;
