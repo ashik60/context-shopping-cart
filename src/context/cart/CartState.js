@@ -6,7 +6,7 @@ import CartReducer from './CartReducer';
 const CartState = ({ children }) => {
   const initialState = {
     showCart: false,
-    cartItem: [],
+    cartItems: [],
   };
 
   const [state, dispatch] = useReducer(CartReducer, initialState);
@@ -27,12 +27,14 @@ const CartState = ({ children }) => {
     <CartContext.Provider
       value={{
         showCart: state.showCart,
-        cartItem: state.cartItem,
+        cartItems: state.cartItems,
         addToCart,
         showHideCart,
         removeItem,
       }}
-    ></CartContext.Provider>
+    >
+      {children}
+    </CartContext.Provider>
   );
 };
 
